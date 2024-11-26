@@ -400,7 +400,6 @@ ValueInputvue_type_script_lang_ts.render = ValueInputvue_type_template_id_8dceff
 
 /* harmony default export */ var ValueInput = (ValueInputvue_type_script_lang_ts);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/SegmentEditor/vue/src/SegmentGenerator/SegmentGenerator.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -563,7 +562,7 @@ const {
   methods: {
     reloadSegments(idsite, visitSegmentsOnly) {
       SegmentGenerator_store.loadSegments(idsite, visitSegmentsOnly).then(segments => {
-        this.queriedSegments = segments.map(s => _extends(_extends({}, s), {}, {
+        this.queriedSegments = segments.map(s => Object.assign(Object.assign({}, s), {}, {
           category: s.category || 'Others'
         }));
         if (this.addInitialCondition && this.conditions.length === 0) {

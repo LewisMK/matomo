@@ -149,7 +149,6 @@ if (typeof window !== 'undefined') {
 var external_CoreHome_ = __webpack_require__("19dc");
 
 // CONCATENATED MODULE: ./plugins/Goals/vue/src/GoalPageLink/GoalPageLink.ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 /*!
  * Matomo - free/libre analytics platform
  *
@@ -172,7 +171,7 @@ const GoalPageLink = {
     link.attr('title', Object(external_CoreHome_["translate"])('Goals_ClickToViewThisGoal'));
     link.click(e => {
       e.preventDefault();
-      external_CoreHome_["MatomoUrl"].updateHash(_extends(_extends({}, external_CoreHome_["MatomoUrl"].hashParsed.value), {}, {
+      external_CoreHome_["MatomoUrl"].updateHash(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].hashParsed.value), {}, {
         category: 'Goals_Goals',
         subcategory: binding.value.idGoal
       }));
@@ -552,7 +551,6 @@ class ManageGoals_store_ManageGoalsStore {
 }
 /* harmony default export */ var ManageGoals_store = (new ManageGoals_store_ManageGoalsStore());
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/Goals/vue/src/ManageGoals/ManageGoals.vue?vue&type=script&lang=ts
-function ManageGoalsvue_type_script_lang_ts_extends() { ManageGoalsvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ManageGoalsvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -750,7 +748,7 @@ function ambiguousBoolToInt(n) {
         if (subcategory === 'Goals_AddNewGoal' && external_CoreHome_["Matomo"].helper.isReportingPage()) {
           // when adding a goal for the first time we need to load manage goals page afterwards
           external_CoreHome_["ReportingMenuStore"].reloadMenuItems().then(() => {
-            external_CoreHome_["MatomoUrl"].updateHash(ManageGoalsvue_type_script_lang_ts_extends(ManageGoalsvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].hashParsed.value), {}, {
+            external_CoreHome_["MatomoUrl"].updateHash(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].hashParsed.value), {}, {
               subcategory: 'Goals_ManageGoals'
             }));
             this.isLoading = false;
@@ -790,7 +788,7 @@ function ambiguousBoolToInt(n) {
       return Object(external_CoreHome_["translate"])('Goals_LearnMoreAboutGoalTrackingDocumentation', Object(external_CoreHome_["externalLink"])('https://matomo.org/docs/tracking-goals-web-analytics/'), '</a>');
     },
     youCanEnableEcommerceReports() {
-      const link = external_CoreHome_["MatomoUrl"].stringify(ManageGoalsvue_type_script_lang_ts_extends(ManageGoalsvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      const link = external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'SitesManager',
         action: 'index'
       }));

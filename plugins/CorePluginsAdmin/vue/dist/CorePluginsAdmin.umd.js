@@ -15034,7 +15034,6 @@ expressions_math.import({
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CorePluginsAdmin/vue/src/FormField/FormField.vue?vue&type=template&id=512ab4ff
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 const _hoisted_1 = {
   class: "form-group row matomo-form-field"
@@ -15060,7 +15059,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       'file-field': _ctx.formField.uiControl === 'file',
       'm6': !_ctx.formField.fullWidth
     }])
-  }, [(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveDynamicComponent"])(_ctx.childComponent), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["mergeProps"])(_extends(_extends({
+  }, [(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveDynamicComponent"])(_ctx.childComponent), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["mergeProps"])(Object.assign(Object.assign({
     formField: _ctx.formField
   }, _ctx.formField), {}, {
     modelValue: _ctx.processedModelValue,
@@ -16828,7 +16827,6 @@ function Fieldvue_type_template_id_5f883444_render(_ctx, _cache, $props, $setup,
 // CONCATENATED MODULE: ./plugins/CorePluginsAdmin/vue/src/Field/Field.vue?vue&type=template&id=5f883444
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CorePluginsAdmin/vue/src/Field/Field.vue?vue&type=script&lang=ts
-function Fieldvue_type_script_lang_ts_extends() { Fieldvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Fieldvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 const UI_CONTROLS_TO_TYPE = {
@@ -16900,7 +16898,7 @@ const UI_CONTROLS_TO_TYPE = {
         inlineHelpBind: this.inlineHelpBind,
         title: this.title,
         component: this.component,
-        uiControlAttributes: Fieldvue_type_script_lang_ts_extends(Fieldvue_type_script_lang_ts_extends({}, this.uiControlAttributes), {}, {
+        uiControlAttributes: Object.assign(Object.assign({}, this.uiControlAttributes), {}, {
           disabled: this.disabled,
           autocomplete: this.autocomplete,
           tabindex: this.tabindex,
@@ -17696,7 +17694,6 @@ function InstallAllPaidPluginsButtonvue_type_template_id_cc5c17d4_render(_ctx, _
 // CONCATENATED MODULE: ./plugins/CorePluginsAdmin/vue/src/InstallAllPaidPluginsButton/InstallAllPaidPluginsButton.vue?vue&type=template&id=cc5c17d4
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CorePluginsAdmin/vue/src/InstallAllPaidPluginsButton/InstallAllPaidPluginsButton.vue?vue&type=script&lang=ts
-function InstallAllPaidPluginsButtonvue_type_script_lang_ts_extends() { InstallAllPaidPluginsButtonvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return InstallAllPaidPluginsButtonvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 /* harmony default export */ var InstallAllPaidPluginsButtonvue_type_script_lang_ts = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
@@ -17750,7 +17747,7 @@ function InstallAllPaidPluginsButtonvue_type_script_lang_ts_extends() { InstallA
   },
   computed: {
     installAllPaidPluginsLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(InstallAllPaidPluginsButtonvue_type_script_lang_ts_extends(InstallAllPaidPluginsButtonvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'Marketplace',
         action: 'installAllPaidPlugins',
         nonce: this.installNonce
@@ -17768,7 +17765,6 @@ InstallAllPaidPluginsButtonvue_type_script_lang_ts.render = InstallAllPaidPlugin
 
 /* harmony default export */ var InstallAllPaidPluginsButton = (InstallAllPaidPluginsButtonvue_type_script_lang_ts);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CorePluginsAdmin/vue/src/PluginsIntro/PluginsIntro.vue?vue&type=script&lang=ts
-function PluginsIntrovue_type_script_lang_ts_extends() { PluginsIntrovue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return PluginsIntrovue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -17787,7 +17783,7 @@ function PluginsIntrovue_type_script_lang_ts_extends() { PluginsIntrovue_type_sc
   },
   computed: {
     teaserExtendMatomoByPluginText() {
-      const link = `?${external_CoreHome_["MatomoUrl"].stringify(PluginsIntrovue_type_script_lang_ts_extends(PluginsIntrovue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      const link = `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'Marketplace',
         action: 'overview',
         sort: null,
@@ -17796,7 +17792,7 @@ function PluginsIntrovue_type_script_lang_ts_extends() { PluginsIntrovue_type_sc
       return Object(external_CoreHome_["translate"])('CorePluginsAdmin_TeaserExtendPiwikByPlugin', `<a href="${link}">`, '</a>', '<a href="#" class="uploadPlugin">', '</a>');
     },
     changeLookByManageThemesText() {
-      const link = `?${external_CoreHome_["MatomoUrl"].stringify(PluginsIntrovue_type_script_lang_ts_extends(PluginsIntrovue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      const link = `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         action: 'themes',
         activated: null
       }))}`;
@@ -17877,7 +17873,6 @@ ThemesIntrovue_type_script_lang_ts.render = ThemesIntrovue_type_template_id_355b
 
 /* harmony default export */ var ThemesIntro = (ThemesIntrovue_type_script_lang_ts);
 // CONCATENATED MODULE: ./plugins/CorePluginsAdmin/vue/src/Plugins/PluginName.ts
-function PluginName_extends() { PluginName_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return PluginName_extends.apply(this, arguments); }
 /*!
  * Matomo - free/libre analytics platform
  *
@@ -17898,7 +17893,7 @@ window.broadcast.addPopoverHandler('browsePluginDetail', value => {
   // use marketplace popover if marketplace is loaded
   if (external_CoreHome_["MatomoUrl"].urlParsed.value.module === 'Marketplace' && external_CoreHome_["MatomoUrl"].urlParsed.value.action === 'overview') {
     window.broadcast.propagateNewPopoverParameter('');
-    external_CoreHome_["MatomoUrl"].updateHash(PluginName_extends(PluginName_extends({}, external_CoreHome_["MatomoUrl"].hashParsed.value), {}, {
+    external_CoreHome_["MatomoUrl"].updateHash(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].hashParsed.value), {}, {
       showPlugin: pluginName,
       popover: null
     }));
@@ -18282,7 +18277,6 @@ function PluginsTablevue_type_template_id_41c002f9_render(_ctx, _cache, $props, 
 // CONCATENATED MODULE: ./plugins/CorePluginsAdmin/vue/src/PluginsTable/PluginsTable.vue?vue&type=template&id=41c002f9
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CorePluginsAdmin/vue/src/PluginsTable/PluginsTable.vue?vue&type=script&lang=ts
-function PluginsTablevue_type_script_lang_ts_extends() { PluginsTablevue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return PluginsTablevue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -18401,7 +18395,7 @@ function PluginsTablevue_type_script_lang_ts_extends() { PluginsTablevue_type_sc
       }));
     },
     generalSettingsLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(PluginsTablevue_type_script_lang_ts_extends(PluginsTablevue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'CoreAdminHome',
         action: 'generalSettings'
       }))}`;
@@ -18420,7 +18414,7 @@ function PluginsTablevue_type_script_lang_ts_extends() { PluginsTablevue_type_sc
       return `?${query}#?${hash}`;
     },
     overviewLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(PluginsTablevue_type_script_lang_ts_extends(PluginsTablevue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'Marketplace',
         action: 'overview',
         sort: ''
@@ -18562,7 +18556,6 @@ function PluginsTableWithUpdatesvue_type_template_id_3e5099d9_render(_ctx, _cach
 // CONCATENATED MODULE: ./plugins/CorePluginsAdmin/vue/src/PluginsTable/PluginsTableWithUpdates.vue?vue&type=template&id=3e5099d9
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CorePluginsAdmin/vue/src/PluginsTable/PluginsTableWithUpdates.vue?vue&type=script&lang=ts
-function PluginsTableWithUpdatesvue_type_script_lang_ts_extends() { PluginsTableWithUpdatesvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return PluginsTableWithUpdatesvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -18615,7 +18608,7 @@ const MissingReqsNotice = Object(external_CoreHome_["useExternalPluginComponent"
       });
     },
     downloadPluginLink(plugin) {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(PluginsTableWithUpdatesvue_type_script_lang_ts_extends(PluginsTableWithUpdatesvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'Marketplace',
         action: 'download',
         pluginName: plugin.name,
@@ -18623,7 +18616,7 @@ const MissingReqsNotice = Object(external_CoreHome_["useExternalPluginComponent"
       }))}`;
     },
     updatePluginLink(plugin) {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(PluginsTableWithUpdatesvue_type_script_lang_ts_extends(PluginsTableWithUpdatesvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'Marketplace',
         action: 'updatePlugin',
         pluginName: plugin.name,
@@ -18633,7 +18626,7 @@ const MissingReqsNotice = Object(external_CoreHome_["useExternalPluginComponent"
     updateSelectedPlugins() {
       this.isUpdating = true;
       const pluginsToUpdate = Object.entries(this.pluginsSelected).filter(([, selected]) => selected).map(([name]) => name);
-      external_CoreHome_["MatomoUrl"].updateUrl(PluginsTableWithUpdatesvue_type_script_lang_ts_extends(PluginsTableWithUpdatesvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      external_CoreHome_["MatomoUrl"].updateUrl(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'Marketplace',
         action: 'updatePlugin',
         nonce: this.updateNonce,
@@ -18708,7 +18701,6 @@ function UploadPluginDialogvue_type_template_id_64bf4ede_render(_ctx, _cache, $p
 // CONCATENATED MODULE: ./plugins/CorePluginsAdmin/vue/src/UploadPluginDialog/UploadPluginDialog.vue?vue&type=template&id=64bf4ede
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CorePluginsAdmin/vue/src/UploadPluginDialog/UploadPluginDialog.vue?vue&type=script&lang=ts
-function UploadPluginDialogvue_type_script_lang_ts_extends() { UploadPluginDialogvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return UploadPluginDialogvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -18732,7 +18724,7 @@ function UploadPluginDialogvue_type_script_lang_ts_extends() { UploadPluginDialo
   },
   computed: {
     uploadPluginAction() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(UploadPluginDialogvue_type_script_lang_ts_extends(UploadPluginDialogvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'CorePluginsAdmin',
         action: 'uploadPlugin',
         nonce: this.installNonce

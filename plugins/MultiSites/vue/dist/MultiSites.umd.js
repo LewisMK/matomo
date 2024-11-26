@@ -982,7 +982,6 @@ SitesTablevue_type_script_lang_ts.render = SitesTablevue_type_template_id_198e6b
 
 /* harmony default export */ var SitesTable = (SitesTablevue_type_script_lang_ts);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/MultiSites/vue/src/AllWebsitesDashboard/AllWebsitesDashboard.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -1033,7 +1032,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
   },
   computed: {
     addSiteUrl() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(_extends(_extends(_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), external_CoreHome_["MatomoUrl"].hashParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), external_CoreHome_["MatomoUrl"].hashParsed.value), {}, {
         module: 'SitesManager',
         action: 'index',
         showaddsite: '1'

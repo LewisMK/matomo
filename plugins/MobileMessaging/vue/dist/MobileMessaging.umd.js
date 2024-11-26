@@ -228,7 +228,6 @@ var external_CoreHome_ = __webpack_require__("19dc");
 var external_CorePluginsAdmin_ = __webpack_require__("a5a2");
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/MobileMessaging/vue/src/SelectPhoneNumbers/SelectPhoneNumbers.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -247,7 +246,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
   },
   methods: {
     linkTo(params) {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(_extends(_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), params))}`;
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), params))}`;
     }
   }
 }));
@@ -386,7 +385,6 @@ function ManageSmsProvidervue_type_template_id_1a20acce_render(_ctx, _cache, $pr
 // CONCATENATED MODULE: ./plugins/MobileMessaging/vue/src/ManageSmsProvider/ManageSmsProvider.vue?vue&type=template&id=1a20acce
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/MobileMessaging/vue/src/SmsProviderCredentials/SmsProviderCredentials.vue?vue&type=template&id=d7bc9978
-function SmsProviderCredentialsvue_type_template_id_d7bc9978_extends() { SmsProviderCredentialsvue_type_template_id_d7bc9978_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SmsProviderCredentialsvue_type_template_id_d7bc9978_extends.apply(this, arguments); }
 
 const SmsProviderCredentialsvue_type_template_id_d7bc9978_hoisted_1 = {
   key: 0
@@ -400,7 +398,7 @@ function SmsProviderCredentialsvue_type_template_id_d7bc9978_render(_ctx, _cache
       uicontrol: field.type,
       name: field.name,
       "model-value": (_ctx$modelValue = _ctx.modelValue) === null || _ctx$modelValue === void 0 ? void 0 : _ctx$modelValue[field.name],
-      "onUpdate:modelValue": $event => _ctx.$emit('update:modelValue', SmsProviderCredentialsvue_type_template_id_d7bc9978_extends(SmsProviderCredentialsvue_type_template_id_d7bc9978_extends({}, _ctx.modelValue), {}, {
+      "onUpdate:modelValue": $event => _ctx.$emit('update:modelValue', Object.assign(Object.assign({}, _ctx.modelValue), {}, {
         [field.name]: $event
       })),
       title: _ctx.translate(field.title)

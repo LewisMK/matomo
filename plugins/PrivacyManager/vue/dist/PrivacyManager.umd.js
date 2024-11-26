@@ -388,7 +388,6 @@ var external_SegmentEditor_ = __webpack_require__("f06f");
 var external_CorePluginsAdmin_ = __webpack_require__("a5a2");
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/PrivacyManager/vue/src/ManageGdpr/ManageGdpr.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -444,7 +443,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
       }, 200);
     },
     linkTo(action) {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(_extends(_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'PrivacyManager',
         action
       }))}`;
@@ -1485,7 +1484,6 @@ DoNotTrackPreferencevue_type_script_lang_ts.render = DoNotTrackPreferencevue_typ
 
 /* harmony default export */ var DoNotTrackPreference = (DoNotTrackPreferencevue_type_script_lang_ts);
 // CONCATENATED MODULE: ./plugins/PrivacyManager/vue/src/ReportDeletionSettings/ReportDeletionSettings.store.ts
-function ReportDeletionSettings_store_extends() { ReportDeletionSettings_store_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ReportDeletionSettings_store_extends.apply(this, arguments); }
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 /*!
  * Matomo - free/libre analytics platform
@@ -1514,7 +1512,7 @@ class ReportDeletionSettings_store_ReportDeletionSettingsStore {
     this.privateState.isModified = true;
   }
   initSettings(settings) {
-    this.privateState.settings = ReportDeletionSettings_store_extends(ReportDeletionSettings_store_extends({}, this.privateState.settings), settings);
+    this.privateState.settings = Object.assign(Object.assign({}, this.privateState.settings), settings);
     this.reloadDbStats();
   }
   savePurgeDataSettings(apiMethod, settings, password) {
@@ -1522,7 +1520,7 @@ class ReportDeletionSettings_store_ReportDeletionSettingsStore {
     return external_CoreHome_["AjaxHelper"].post({
       module: 'API',
       method: apiMethod
-    }, ReportDeletionSettings_store_extends(ReportDeletionSettings_store_extends({}, settings), {}, {
+    }, Object.assign(Object.assign({}, settings), {}, {
       enableDeleteLogs: settings.enableDeleteLogs ? '1' : '0',
       enableDeleteReports: settings.enableDeleteReports ? '1' : '0',
       passwordConfirmation: password
@@ -1557,7 +1555,7 @@ class ReportDeletionSettings_store_ReportDeletionSettingsStore {
     const {
       settings
     } = this.privateState;
-    const formData = ReportDeletionSettings_store_extends(ReportDeletionSettings_store_extends({}, settings), {}, {
+    const formData = Object.assign(Object.assign({}, settings), {}, {
       enableDeleteLogs: settings.enableDeleteLogs ? '1' : '0',
       enableDeleteReports: settings.enableDeleteReports ? '1' : '0'
     });

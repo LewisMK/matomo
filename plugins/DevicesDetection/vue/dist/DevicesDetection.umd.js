@@ -271,7 +271,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 var external_CoreHome_ = __webpack_require__("19dc");
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/DevicesDetection/vue/src/DetectionPage/DetectionPage.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 function isClientHintsSupported() {
@@ -296,7 +295,7 @@ function getDefaultClientHints() {
   // currently this methods simply returns the requested values through a Promise
   // In later versions it might require a user permission
   return nav.userAgentData.getHighEntropyValues(['brands', 'model', 'platform', 'platformVersion', 'uaFullVersion', 'fullVersionList']).then(ua => {
-    clientHints = _extends({}, ua);
+    clientHints = Object.assign({}, ua);
     if (clientHints.fullVersionList) {
       // if fullVersionList is available, brands and uaFullVersion isn't needed
       delete clientHints.brands;

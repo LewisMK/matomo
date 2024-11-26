@@ -1512,7 +1512,6 @@ function UserEditFormvue_type_template_id_b96898cc_render(_ctx, _cache, $props, 
 // CONCATENATED MODULE: ./plugins/UsersManager/vue/src/UserEditForm/UserEditForm.vue?vue&type=template&id=b96898cc
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/UsersManager/vue/src/UserEditForm/UserEditForm.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -1570,7 +1569,7 @@ const DEFAULT_USER = {
   },
   data() {
     return {
-      theUser: this.user || _extends({}, DEFAULT_USER),
+      theUser: this.user || Object.assign({}, DEFAULT_USER),
       activeTab: 'basic',
       permissionsForIdSite: 1,
       isSavingUserInfo: false,
@@ -1600,7 +1599,7 @@ const DEFAULT_USER = {
   },
   methods: {
     onUserChange(newVal) {
-      this.theUser = newVal || _extends({}, DEFAULT_USER);
+      this.theUser = newVal || Object.assign({}, DEFAULT_USER);
       if (!this.theUser.password) {
         this.resetPasswordVar();
       }
@@ -2230,7 +2229,6 @@ function PagedUsersListvue_type_template_id_3c24998f_render(_ctx, _cache, $props
 // CONCATENATED MODULE: ./plugins/UsersManager/vue/src/PagedUsersList/PagedUsersList.vue?vue&type=template&id=3c24998f
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/UsersManager/vue/src/PagedUsersList/PagedUsersList.vue?vue&type=script&lang=ts
-function PagedUsersListvue_type_script_lang_ts_extends() { PagedUsersListvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return PagedUsersListvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -2394,7 +2392,7 @@ const {
       return result;
     },
     changeSearch(changes) {
-      const params = PagedUsersListvue_type_script_lang_ts_extends(PagedUsersListvue_type_script_lang_ts_extends({}, this.searchParams), changes);
+      const params = Object.assign(Object.assign({}, this.searchParams), changes);
       this.$emit('searchChange', {
         params
       });
@@ -2656,7 +2654,6 @@ function UsersManagervue_type_template_id_92c94f4a_render(_ctx, _cache, $props, 
 // CONCATENATED MODULE: ./plugins/UsersManager/vue/src/UsersManager/UsersManager.vue?vue&type=template&id=92c94f4a
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/UsersManager/vue/src/UsersManager/UsersManager.vue?vue&type=script&lang=ts
-function UsersManagervue_type_script_lang_ts_extends() { UsersManagervue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return UsersManagervue_type_script_lang_ts_extends.apply(this, arguments); }
 /* eslint-disable newline-per-chained-call */
 
 
@@ -2932,7 +2929,7 @@ ${Object(external_CoreHome_["translate"])('UsersManager_CopyDeniedHints', [`<br>
     },
     fetchUsers() {
       this.isLoadingUsers = true;
-      return external_CoreHome_["AjaxHelper"].fetch(UsersManagervue_type_script_lang_ts_extends(UsersManagervue_type_script_lang_ts_extends({}, this.searchParams), {}, {
+      return external_CoreHome_["AjaxHelper"].fetch(Object.assign(Object.assign({}, this.searchParams), {}, {
         method: 'UsersManager.getUsersPlusRole'
       }), {
         returnResponseObject: true
@@ -3522,7 +3519,6 @@ function AddNewTokenvue_type_template_id_5852e320_render(_ctx, _cache, $props, $
 // CONCATENATED MODULE: ./plugins/UsersManager/vue/src/AddNewToken/AddNewToken.vue?vue&type=template&id=5852e320
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/UsersManager/vue/src/AddNewToken/AddNewToken.vue?vue&type=script&lang=ts
-function AddNewTokenvue_type_script_lang_ts_extends() { AddNewTokenvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return AddNewTokenvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -3544,13 +3540,13 @@ function AddNewTokenvue_type_script_lang_ts_extends() { AddNewTokenvue_type_scri
   },
   computed: {
     addNewTokenFormUrl() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(AddNewTokenvue_type_script_lang_ts_extends(AddNewTokenvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'UsersManager',
         action: 'addNewToken'
       }))}`;
     },
     cancelLink() {
-      const backlink = `?${external_CoreHome_["MatomoUrl"].stringify(AddNewTokenvue_type_script_lang_ts_extends(AddNewTokenvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      const backlink = `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'UsersManager',
         action: 'userSecurity'
       }))}`;
@@ -3602,7 +3598,6 @@ function AddNewTokenSuccessvue_type_template_id_c60f0f6c_render(_ctx, _cache, $p
 // CONCATENATED MODULE: ./plugins/UsersManager/vue/src/AddNewToken/AddNewTokenSuccess.vue?vue&type=template&id=c60f0f6c
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/UsersManager/vue/src/AddNewToken/AddNewTokenSuccess.vue?vue&type=script&lang=ts
-function AddNewTokenSuccessvue_type_script_lang_ts_extends() { AddNewTokenSuccessvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return AddNewTokenSuccessvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 /* harmony default export */ var AddNewTokenSuccessvue_type_script_lang_ts = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
@@ -3620,7 +3615,7 @@ function AddNewTokenSuccessvue_type_script_lang_ts_extends() { AddNewTokenSucces
   },
   computed: {
     userSecurityLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(AddNewTokenSuccessvue_type_script_lang_ts_extends(AddNewTokenSuccessvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'UsersManager',
         action: 'userSecurity'
       }))}`;
@@ -3815,7 +3810,6 @@ function UserSecurityvue_type_template_id_60a12226_render(_ctx, _cache, $props, 
 // CONCATENATED MODULE: ./plugins/UsersManager/vue/src/UserSecurity/UserSecurity.vue?vue&type=template&id=60a12226
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/UsersManager/vue/src/UserSecurity/UserSecurity.vue?vue&type=script&lang=ts
-function UserSecurityvue_type_script_lang_ts_extends() { UserSecurityvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return UserSecurityvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -3852,7 +3846,7 @@ function UserSecurityvue_type_script_lang_ts_extends() { UserSecurityvue_type_sc
   },
   computed: {
     recordPasswordChangeAction() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(UserSecurityvue_type_script_lang_ts_extends(UserSecurityvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'UsersManager',
         action: 'recordPasswordChange'
       }))}`;
@@ -3861,20 +3855,20 @@ function UserSecurityvue_type_script_lang_ts_extends() { UserSecurityvue_type_sc
       return Object(external_CoreHome_["translate"])('UsersManager_EmailYourAdministrator', this.invalidHostMailLinkStart || '', '</a>');
     },
     noTokenCreatedYetText() {
-      const addNewTokenLink = `?${external_CoreHome_["MatomoUrl"].stringify(UserSecurityvue_type_script_lang_ts_extends(UserSecurityvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      const addNewTokenLink = `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'UsersManager',
         action: 'addNewToken'
       }))}`;
       return Object(external_CoreHome_["translate"])('UsersManager_NoTokenCreatedYetCreateNow', `<a href="${addNewTokenLink}">`, '</a>');
     },
     deleteTokenAction() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(UserSecurityvue_type_script_lang_ts_extends(UserSecurityvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'UsersManager',
         action: 'deleteToken'
       }))}`;
     },
     addNewTokenLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(UserSecurityvue_type_script_lang_ts_extends(UserSecurityvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'UsersManager',
         action: 'addNewToken'
       }))}`;

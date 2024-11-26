@@ -307,7 +307,6 @@ function ShowRecoveryCodesPagevue_type_template_id_13e8e57f_render(_ctx, _cache,
 // CONCATENATED MODULE: ./plugins/TwoFactorAuth/vue/src/ShowRecoveryCodes/ShowRecoveryCodesPage.vue?vue&type=template&id=13e8e57f
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/TwoFactorAuth/vue/src/ShowRecoveryCodes/ShowRecoveryCodesPage.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -332,7 +331,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
       return `${part1} - ${part2}`;
     },
     showRecoveryCodesLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(_extends(_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'TwoFactorAuth',
         action: 'showRecoveryCodes'
       }))}`;
@@ -556,7 +555,6 @@ InstallOTPAppvue_type_script_lang_ts.render = InstallOTPAppvue_type_template_id_
 
 /* harmony default export */ var InstallOTPApp = (InstallOTPAppvue_type_script_lang_ts);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/TwoFactorAuth/vue/src/SetupTwoFactorAuth/SetupTwoFactorAuth.vue?vue&type=script&lang=ts
-function SetupTwoFactorAuthvue_type_script_lang_ts_extends() { SetupTwoFactorAuthvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SetupTwoFactorAuthvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -654,7 +652,7 @@ const {
       this.scrollToEnd();
     },
     linkTo(params) {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(SetupTwoFactorAuthvue_type_script_lang_ts_extends(SetupTwoFactorAuthvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), params))}`;
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), params))}`;
     }
   },
   computed: {
@@ -864,7 +862,6 @@ function SetupFinishedvue_type_template_id_631d8678_render(_ctx, _cache, $props,
 // CONCATENATED MODULE: ./plugins/TwoFactorAuth/vue/src/SetupFinished/SetupFinished.vue?vue&type=template&id=631d8678
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/TwoFactorAuth/vue/src/SetupFinished/SetupFinished.vue?vue&type=script&lang=ts
-function SetupFinishedvue_type_script_lang_ts_extends() { SetupFinishedvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SetupFinishedvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 /* harmony default export */ var SetupFinishedvue_type_script_lang_ts = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
@@ -873,7 +870,7 @@ function SetupFinishedvue_type_script_lang_ts_extends() { SetupFinishedvue_type_
   },
   computed: {
     userSecurityLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(SetupFinishedvue_type_script_lang_ts_extends(SetupFinishedvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'UsersManager',
         action: 'userSecurity'
       }))}`;
@@ -982,7 +979,6 @@ function UserSettingsvue_type_template_id_790c613d_render(_ctx, _cache, $props, 
 // CONCATENATED MODULE: ./plugins/TwoFactorAuth/vue/src/UserSettings/UserSettings.vue?vue&type=template&id=790c613d
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/TwoFactorAuth/vue/src/UserSettings/UserSettings.vue?vue&type=script&lang=ts
-function UserSettingsvue_type_script_lang_ts_extends() { UserSettingsvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return UserSettingsvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 /* harmony default export */ var UserSettingsvue_type_script_lang_ts = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
@@ -1007,20 +1003,20 @@ function UserSettingsvue_type_script_lang_ts_extends() { UserSettingsvue_type_sc
       return Object(external_CoreHome_["translate"])('TwoFactorAuth_TwoFactorAuthenticationIntro', Object(external_CoreHome_["externalLink"])('https://matomo.org/faq/general/faq_27245'), '</a>');
     },
     setupTwoFactorAuthLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(UserSettingsvue_type_script_lang_ts_extends(UserSettingsvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'TwoFactorAuth',
         action: 'setupTwoFactorAuth'
       }))}`;
     },
     disableTwoFactorAuthLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(UserSettingsvue_type_script_lang_ts_extends(UserSettingsvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'TwoFactorAuth',
         action: 'disableTwoFactorAuth',
         disableNonce: this.disableNonce
       }))}`;
     },
     showRecoveryCodesLink() {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(UserSettingsvue_type_script_lang_ts_extends(UserSettingsvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), {}, {
         module: 'TwoFactorAuth',
         action: 'showRecoveryCodes'
       }))}`;

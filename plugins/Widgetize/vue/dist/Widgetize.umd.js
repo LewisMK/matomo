@@ -221,7 +221,6 @@ function WidgetPreviewvue_type_template_id_1d314ae4_render(_ctx, _cache, $props,
 // CONCATENATED MODULE: ./plugins/Widgetize/vue/src/WidgetPreview/WidgetPreview.vue?vue&type=template&id=1d314ae4
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/Widgetize/vue/src/WidgetPreview/WidgetPreview.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 const {
@@ -252,7 +251,7 @@ const {
       });
     },
     getEmbedUrl(parameters, exportFormat) {
-      const finalParams = _extends(_extends({}, parameters), {}, {
+      const finalParams = Object.assign(Object.assign({}, parameters), {}, {
         moduleToWidgetize: parameters.module,
         actionToWidgetize: parameters.action,
         module: 'Widgetize',
@@ -341,7 +340,6 @@ function ExportWidgetvue_type_template_id_00de7386_render(_ctx, _cache, $props, 
 // CONCATENATED MODULE: ./plugins/Widgetize/vue/src/ExportWidget/ExportWidget.vue?vue&type=template&id=00de7386
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/Widgetize/vue/src/ExportWidget/ExportWidget.vue?vue&type=script&lang=ts
-function ExportWidgetvue_type_script_lang_ts_extends() { ExportWidgetvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ExportWidgetvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -432,7 +430,7 @@ function getIframeCode(iframeUrl) {
   },
   methods: {
     linkTo(params) {
-      return `?${external_CoreHome_["MatomoUrl"].stringify(ExportWidgetvue_type_script_lang_ts_extends(ExportWidgetvue_type_script_lang_ts_extends({}, external_CoreHome_["MatomoUrl"].urlParsed.value), params))}`;
+      return `?${external_CoreHome_["MatomoUrl"].stringify(Object.assign(Object.assign({}, external_CoreHome_["MatomoUrl"].urlParsed.value), params))}`;
     }
   }
 }));

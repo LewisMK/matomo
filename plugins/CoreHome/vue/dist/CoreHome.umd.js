@@ -827,7 +827,6 @@ const Matomo = piwik;
 
 
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/MatomoUrl/MatomoUrl.ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function MatomoUrl_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 /*!
  * Matomo - free/libre analytics platform
@@ -860,7 +859,7 @@ class MatomoUrl_MatomoUrl {
     MatomoUrl_defineProperty(this, "hashQuery", Object(external_commonjs_vue_commonjs2_vue_root_Vue_["computed"])(() => this.url.value ? this.url.value.hash.replace(/^[#/?]+/, '') : ''));
     MatomoUrl_defineProperty(this, "urlParsed", Object(external_commonjs_vue_commonjs2_vue_root_Vue_["computed"])(() => Object(external_commonjs_vue_commonjs2_vue_root_Vue_["readonly"])(this.parse(this.urlQuery.value))));
     MatomoUrl_defineProperty(this, "hashParsed", Object(external_commonjs_vue_commonjs2_vue_root_Vue_["computed"])(() => Object(external_commonjs_vue_commonjs2_vue_root_Vue_["readonly"])(this.parse(this.hashQuery.value))));
-    MatomoUrl_defineProperty(this, "parsed", Object(external_commonjs_vue_commonjs2_vue_root_Vue_["computed"])(() => Object(external_commonjs_vue_commonjs2_vue_root_Vue_["readonly"])(_extends(_extends({}, this.urlParsed.value), this.hashParsed.value))));
+    MatomoUrl_defineProperty(this, "parsed", Object(external_commonjs_vue_commonjs2_vue_root_Vue_["computed"])(() => Object(external_commonjs_vue_commonjs2_vue_root_Vue_["readonly"])(Object.assign(Object.assign({}, this.urlParsed.value), this.hashParsed.value))));
     this.url.value = new URL(window.location.href);
     window.addEventListener('hashchange', event => {
       this.url.value = new URL(event.newURL);
@@ -898,7 +897,7 @@ class MatomoUrl_MatomoUrl {
   getFinalHashParams(params, urlParams = {}) {
     const paramsObj = typeof params !== 'string' ? params : this.parse(params);
     const urlParamsObj = typeof params !== 'string' ? urlParams : this.parse(urlParams);
-    return _extends({
+    return Object.assign({
       // these params must always be present in the hash
       period: urlParamsObj.period || this.parsed.value.period,
       date: urlParamsObj.date || this.parsed.value.date,
@@ -967,7 +966,6 @@ const instance = new MatomoUrl_MatomoUrl();
 /* harmony default export */ var src_MatomoUrl_MatomoUrl = (instance);
 MatomoUrl_piwik.updatePeriodParamsFromUrl = instance.updatePeriodParamsFromUrl.bind(instance);
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/AjaxHelper/AjaxHelper.ts
-function AjaxHelper_extends() { AjaxHelper_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return AjaxHelper_extends.apply(this, arguments); }
 function AjaxHelper_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 /*!
  * Matomo - free/libre analytics platform
@@ -1049,7 +1047,7 @@ class AjaxHelper_AjaxHelper {
           throw new Error(`Password parameters are not allowed to be sent as GET parameter. Please send ${key} as POST parameter instead.`);
         }
       });
-      helper.addParams(AjaxHelper_extends(AjaxHelper_extends({
+      helper.addParams(Object.assign(Object.assign({
         module: 'API',
         format: options.format || 'json'
       }, params), {}, {
@@ -1067,7 +1065,7 @@ class AjaxHelper_AjaxHelper {
       helper.addParams(options.postParams, 'post');
     }
     if (options.headers) {
-      helper.headers = AjaxHelper_extends(AjaxHelper_extends({}, helper.headers), options.headers);
+      helper.headers = Object.assign(Object.assign({}, helper.headers), options.headers);
     }
     let createErrorNotification = true;
     if (typeof options.createErrorNotification !== 'undefined' && !options.createErrorNotification) {
@@ -1108,7 +1106,7 @@ class AjaxHelper_AjaxHelper {
   static post(params,
   // eslint-disable-next-line
   postParams = {}, options = {}) {
-    return AjaxHelper_AjaxHelper.fetch(params, AjaxHelper_extends(AjaxHelper_extends({}, options), {}, {
+    return AjaxHelper_AjaxHelper.fetch(params, Object.assign(Object.assign({}, options), {}, {
       postParams
     }));
   }
@@ -1120,9 +1118,9 @@ class AjaxHelper_AjaxHelper {
         abortController.abort();
       }
       abortController = new AbortController();
-      return AjaxHelper_AjaxHelper.post(AjaxHelper_extends(AjaxHelper_extends({}, params), {}, {
+      return AjaxHelper_AjaxHelper.post(Object.assign(Object.assign({}, params), {}, {
         method
-      }), postParams, AjaxHelper_extends(AjaxHelper_extends({}, options), {}, {
+      }), postParams, Object.assign(Object.assign({}, options), {}, {
         abortController
       })).finally(() => {
         abortController = null;
@@ -1523,7 +1521,7 @@ class AjaxHelper_AjaxHelper {
    */
   mixinDefaultPostParams(params) {
     const defaultParams = this.getDefaultPostParams();
-    const mergedParams = AjaxHelper_extends(AjaxHelper_extends({}, defaultParams), params);
+    const mergedParams = Object.assign(Object.assign({}, defaultParams), params);
     return mergedParams;
   }
   /**
@@ -2534,7 +2532,6 @@ function MatomoDialogvue_type_template_id_1791e7fd_render(_ctx, _cache, $props, 
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/MatomoDialog/MatomoDialog.vue?vue&type=template&id=1791e7fd
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/MatomoDialog/MatomoDialog.vue?vue&type=script&lang=ts
-function MatomoDialogvue_type_script_lang_ts_extends() { MatomoDialogvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return MatomoDialogvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 /* harmony default export */ var MatomoDialogvue_type_script_lang_ts = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
@@ -2570,7 +2567,7 @@ function MatomoDialogvue_type_script_lang_ts_extends() { MatomoDialogvue_type_sc
           validation: () => {
             this.$emit('validation');
           }
-        }, MatomoDialogvue_type_script_lang_ts_extends({
+        }, Object.assign({
           onCloseEnd: () => {
             // materialize removes the child element, so we move it back to the slot
             this.$refs.root.appendChild(slotElement);
@@ -3451,7 +3448,6 @@ class Segments_store_SegmentsStore {
 }
 /* harmony default export */ var Segments_store = (new Segments_store_SegmentsStore());
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/Comparisons/Comparisons.store.ts
-function Comparisons_store_extends() { Comparisons_store_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Comparisons_store_extends.apply(this, arguments); }
 function Comparisons_store_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 /*!
  * Matomo - free/libre analytics platform
@@ -3560,7 +3556,7 @@ class Comparisons_store_ComparisonsStore {
       this.getSegmentComparisons().forEach(segmentComp => {
         seriesInfo.push({
           index: seriesIndex,
-          params: Comparisons_store_extends(Comparisons_store_extends({}, segmentComp.params), periodComp.params),
+          params: Object.assign(Object.assign({}, segmentComp.params), periodComp.params),
           color: this.colors[`series${seriesIndex}`]
         });
         seriesIndex += 1;
@@ -3625,7 +3621,7 @@ class Comparisons_store_ComparisonsStore {
     };
     // change the page w/ these new param values
     const baseParams = Matomo_Matomo.helper.isReportingPage() ? src_MatomoUrl_MatomoUrl.hashParsed.value : src_MatomoUrl_MatomoUrl.urlParsed.value;
-    src_MatomoUrl_MatomoUrl.updateLocation(Comparisons_store_extends(Comparisons_store_extends(Comparisons_store_extends({}, baseParams), compareParams), extraParams));
+    src_MatomoUrl_MatomoUrl.updateLocation(Object.assign(Object.assign(Object.assign({}, baseParams), compareParams), extraParams));
   }
   getAllSeriesColors() {
     const {
@@ -3724,7 +3720,6 @@ class Comparisons_store_ComparisonsStore {
 
 /* harmony default export */ var Comparisons_store_instance = (new Comparisons_store_ComparisonsStore());
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/Comparisons/Comparisons.vue?vue&type=script&lang=ts
-function Comparisonsvue_type_script_lang_ts_extends() { Comparisonsvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Comparisonsvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -3793,7 +3788,7 @@ function Comparisonsvue_type_script_lang_ts_extends() { Comparisonsvue_type_scri
       return `${this.htmlentities(comparison.title)}<br/>` + `${this.htmlentities(decodeURIComponent(comparison.params.segment))}`;
     },
     getUrlToSegment(segment) {
-      const hash = Comparisonsvue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.hashParsed.value);
+      const hash = Object.assign({}, src_MatomoUrl_MatomoUrl.hashParsed.value);
       delete hash.comparePeriods;
       delete hash.compareDates;
       delete hash.compareSegments;
@@ -4009,7 +4004,6 @@ function DatePickervue_type_template_id_7b95c829_render(_ctx, _cache, $props, $s
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/DatePicker/DatePicker.vue?vue&type=template&id=7b95c829
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/DatePicker/DatePicker.vue?vue&type=script&lang=ts
-function DatePickervue_type_script_lang_ts_extends() { DatePickervue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return DatePickervue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -4171,7 +4165,7 @@ const {
     // object it returns will always be different, BUT, since we check what changes it works
     // for our purposes. The only downside is that it runs on every tick basically, but since
     // that is within the context of the date picker component, it's bearable.
-    Object(external_commonjs_vue_commonjs2_vue_root_Vue_["watch"])(() => DatePickervue_type_script_lang_ts_extends({}, props), (newProps, oldProps) => {
+    Object(external_commonjs_vue_commonjs2_vue_root_Vue_["watch"])(() => Object.assign({}, props), (newProps, oldProps) => {
       let redraw = false;
       [x => x.selectedDateStart, x => x.selectedDateEnd, x => x.highlightedDateStart, x => x.highlightedDateEnd].forEach(selector => {
         if (redraw) {
@@ -4206,7 +4200,7 @@ const {
     Object(external_commonjs_vue_commonjs2_vue_root_Vue_["onMounted"])(() => {
       const element = DatePickervue_type_script_lang_ts_$(root.value);
       const customOptions = props.options || {};
-      const datePickerOptions = DatePickervue_type_script_lang_ts_extends(DatePickervue_type_script_lang_ts_extends(DatePickervue_type_script_lang_ts_extends({}, Matomo_Matomo.getBaseDatePickerOptions()), customOptions), {}, {
+      const datePickerOptions = Object.assign(Object.assign(Object.assign({}, Matomo_Matomo.getBaseDatePickerOptions()), customOptions), {}, {
         onChangeMonthYear: () => {
           // datepicker renders the HTML after this hook is called, so we use setTimeout
           // to run some code after the render.
@@ -4762,7 +4756,6 @@ function NotificationGroupvue_type_template_id_148c8a5e_render(_ctx, _cache, $pr
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/Notification/NotificationGroup.vue?vue&type=template&id=148c8a5e
 
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/Notification/Notifications.store.ts
-function Notifications_store_extends() { Notifications_store_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Notifications_store_extends.apply(this, arguments); }
 function Notifications_store_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 /*!
  * Matomo - free/libre analytics platform
@@ -4817,7 +4810,7 @@ class Notifications_store_NotificationsStore {
       const attributes = $notificationNode.data();
       const message = $notificationNode.html();
       if (message) {
-        notificationsToShow.push(Notifications_store_extends(Notifications_store_extends({}, attributes), {}, {
+        notificationsToShow.push(Object.assign(Object.assign({}, attributes), {}, {
           message,
           animate: false
         }));
@@ -4854,7 +4847,7 @@ class Notifications_store_NotificationsStore {
     const group = notification.group || (notificationPosition ? notificationPosition.toString() : '');
     this.initializeNotificationContainer(notificationPosition, group);
     const notificationInstanceId = (this.nextNotificationId += 1).toString();
-    addMethod.call(this, Notifications_store_extends(Notifications_store_extends({}, notification), {}, {
+    addMethod.call(this, Object.assign(Object.assign({}, notification), {}, {
       noclear: !!notification.noclear,
       group,
       notificationId: notification.id,
@@ -4887,7 +4880,7 @@ class Notifications_store_NotificationsStore {
     toastElement.style.zIndex = '1000';
     document.body.appendChild(toastElement);
     const app = createVueApp({
-      render: () => Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(Notification, Notifications_store_extends(Notifications_store_extends({}, notification), {}, {
+      render: () => Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(Notification, Object.assign(Object.assign({}, notification), {}, {
         notificationId: notification.id,
         type: 'toast',
         onClosed: () => {
@@ -5042,7 +5035,6 @@ ShowHelpLinkvue_type_script_lang_ts.render = ShowHelpLinkvue_type_template_id_34
 
 /* harmony default export */ var ShowHelpLink = (ShowHelpLinkvue_type_script_lang_ts);
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/SiteSelector/SitesStore.ts
-function SitesStore_extends() { SitesStore_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SitesStore_extends.apply(this, arguments); }
 function SitesStore_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 /*!
  * Matomo - free/libre analytics platform
@@ -5101,17 +5093,17 @@ class SitesStore_SitesStore {
   }
   loadSite(idSite) {
     if (idSite === 'all') {
-      src_MatomoUrl_MatomoUrl.updateUrl(SitesStore_extends(SitesStore_extends({}, src_MatomoUrl_MatomoUrl.urlParsed.value), {}, {
+      src_MatomoUrl_MatomoUrl.updateUrl(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.urlParsed.value), {}, {
         module: 'MultiSites',
         action: 'index',
         date: src_MatomoUrl_MatomoUrl.parsed.value.date,
         period: src_MatomoUrl_MatomoUrl.parsed.value.period
       }));
     } else {
-      src_MatomoUrl_MatomoUrl.updateUrl(SitesStore_extends(SitesStore_extends({}, src_MatomoUrl_MatomoUrl.urlParsed.value), {}, {
+      src_MatomoUrl_MatomoUrl.updateUrl(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.urlParsed.value), {}, {
         segment: '',
         idSite
-      }), SitesStore_extends(SitesStore_extends({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
+      }), Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
         segment: '',
         idSite
       }));
@@ -5158,7 +5150,7 @@ class SitesStore_SitesStore {
     if (!sites || !sites.length) {
       return [];
     }
-    sites = sites.map(s => SitesStore_extends(SitesStore_extends({}, s), {}, {
+    sites = sites.map(s => Object.assign(Object.assign({}, s), {}, {
       name: s.group ? `[${s.group}] ${s.name}` : s.name
     }));
     sites.sort((lhs, rhs) => {
@@ -5172,7 +5164,6 @@ class SitesStore_SitesStore {
 }
 /* harmony default export */ var SiteSelector_SitesStore = (new SitesStore_SitesStore());
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/SiteSelector/SiteSelector.vue?vue&type=template&id=13051180
-function SiteSelectorvue_type_template_id_13051180_extends() { SiteSelectorvue_type_template_id_13051180_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SiteSelectorvue_type_template_id_13051180_extends.apply(this, arguments); }
 
 const SiteSelectorvue_type_template_id_13051180_hoisted_1 = ["value", "name"];
 const SiteSelectorvue_type_template_id_13051180_hoisted_2 = ["title"];
@@ -5268,7 +5259,7 @@ function SiteSelectorvue_type_template_id_13051180_render(_ctx, _cache, $props, 
     onClick: _cache[7] || (_cache[7] = $event => _ctx.showSitesList = false)
   }, [(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])(_ctx.sites, (site, index) => {
     return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])((Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("li", {
-      onClick: $event => _ctx.switchSite(SiteSelectorvue_type_template_id_13051180_extends(SiteSelectorvue_type_template_id_13051180_extends({}, site), {}, {
+      onClick: $event => _ctx.switchSite(Object.assign(Object.assign({}, site), {}, {
         id: site.idsite
       }), $event),
       key: index
@@ -5331,7 +5322,6 @@ AllSitesLinkvue_type_script_lang_ts.render = AllSitesLinkvue_type_template_id_77
 
 /* harmony default export */ var AllSitesLink = (AllSitesLinkvue_type_script_lang_ts);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/SiteSelector/SiteSelector.vue?vue&type=script&lang=ts
-function SiteSelectorvue_type_script_lang_ts_extends() { SiteSelectorvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SiteSelectorvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -5457,7 +5447,7 @@ function SiteSelectorvue_type_script_lang_ts_extends() { SiteSelectorvue_type_sc
       return initialSites && initialSites.length > 0 ? initialSites[0].name : '';
     },
     urlAllSites() {
-      const newQuery = src_MatomoUrl_MatomoUrl.stringify(SiteSelectorvue_type_script_lang_ts_extends(SiteSelectorvue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.urlParsed.value), {}, {
+      const newQuery = src_MatomoUrl_MatomoUrl.stringify(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.urlParsed.value), {}, {
         module: 'MultiSites',
         action: 'index',
         date: src_MatomoUrl_MatomoUrl.parsed.value.date,
@@ -5581,11 +5571,11 @@ function SiteSelectorvue_type_script_lang_ts_extends() { SiteSelectorvue_type_sc
       });
     },
     getUrlForSiteId(idSite) {
-      const newQuery = src_MatomoUrl_MatomoUrl.stringify(SiteSelectorvue_type_script_lang_ts_extends(SiteSelectorvue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.urlParsed.value), {}, {
+      const newQuery = src_MatomoUrl_MatomoUrl.stringify(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.urlParsed.value), {}, {
         segment: '',
         idSite
       }));
-      const newHash = src_MatomoUrl_MatomoUrl.stringify(SiteSelectorvue_type_script_lang_ts_extends(SiteSelectorvue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
+      const newHash = src_MatomoUrl_MatomoUrl.stringify(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
         segment: '',
         idSite
       }));
@@ -5696,7 +5686,6 @@ function QuickAccessvue_type_template_id_6c970683_render(_ctx, _cache, $props, $
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/QuickAccess/QuickAccess.vue?vue&type=template&id=6c970683
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/QuickAccess/QuickAccess.vue?vue&type=script&lang=ts
-function QuickAccessvue_type_script_lang_ts_extends() { QuickAccessvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return QuickAccessvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -5868,7 +5857,7 @@ function scrollFirstElementIntoView(element) {
       const menuItems = [];
       const moveToCategory = theSubmenuItem => {
         // force rerender of element to prevent weird side effects
-        const submenuItem = QuickAccessvue_type_script_lang_ts_extends({}, theSubmenuItem);
+        const submenuItem = Object.assign({}, theSubmenuItem);
         // needed for proper highlighting with arrow keys
         index += 1;
         submenuItem.menuIndex = index;
@@ -6205,7 +6194,6 @@ function MultiPairFieldvue_type_template_id_bfce275a_render(_ctx, _cache, $props
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/MultiPairField/MultiPairField.vue?vue&type=template&id=bfce275a
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/MultiPairField/MultiPairField.vue?vue&type=script&lang=ts
-function MultiPairFieldvue_type_script_lang_ts_extends() { MultiPairFieldvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return MultiPairFieldvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 // async since this is a recursive component
@@ -6258,7 +6246,7 @@ const MultiPairFieldvue_type_script_lang_ts_Field = useExternalPluginComponent('
     },
     onEntryChange(index, key, newValue) {
       const newWholeValue = [...this.modelValue];
-      newWholeValue[index] = MultiPairFieldvue_type_script_lang_ts_extends(MultiPairFieldvue_type_script_lang_ts_extends({}, newWholeValue[index]), {}, {
+      newWholeValue[index] = Object.assign(Object.assign({}, newWholeValue[index]), {}, {
         [key]: newValue
       });
       this.$emit('update:modelValue', newWholeValue);
@@ -6488,7 +6476,6 @@ function PeriodSelectorvue_type_template_id_facf55b4_render(_ctx, _cache, $props
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/PeriodSelector/PeriodSelector.vue?vue&type=template&id=facf55b4
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/PeriodSelector/PeriodSelector.vue?vue&type=script&lang=ts
-function PeriodSelectorvue_type_script_lang_ts_extends() { PeriodSelectorvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return PeriodSelectorvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -6716,11 +6703,11 @@ function isValidDate(d) {
         baseParams = src_MatomoUrl_MatomoUrl.parsed.value;
       }
       // get params without comparePeriods/compareSegments/compareDates
-      const paramsWithoutCompare = PeriodSelectorvue_type_script_lang_ts_extends({}, baseParams);
+      const paramsWithoutCompare = Object.assign({}, baseParams);
       delete paramsWithoutCompare.comparePeriods;
       delete paramsWithoutCompare.comparePeriodType;
       delete paramsWithoutCompare.compareDates;
-      src_MatomoUrl_MatomoUrl.updateLocation(PeriodSelectorvue_type_script_lang_ts_extends(PeriodSelectorvue_type_script_lang_ts_extends({}, paramsWithoutCompare), {}, {
+      src_MatomoUrl_MatomoUrl.updateLocation(Object.assign(Object.assign({}, paramsWithoutCompare), {}, {
         date,
         period
       }, compareParams));
@@ -7120,7 +7107,6 @@ function getSubcategoryChildren(subcategory) {
   return [];
 }
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/ReportingMenu/ReportingMenu.store.ts
-function ReportingMenu_store_extends() { ReportingMenu_store_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ReportingMenu_store_extends.apply(this, arguments); }
 function ReportingMenu_store_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 /*!
  * Matomo - free/libre analytics platform
@@ -7205,7 +7191,7 @@ class ReportingMenu_store_ReportingMenuStore {
     const pages = ReportingPages_store.pages.value;
     const categoriesHandled = {};
     pages.forEach(page => {
-      const category = ReportingMenu_store_extends({}, page.category);
+      const category = Object.assign({}, page.category);
       const categoryId = category.id;
       const isCategoryDisplayed = categoryId === displayedCategory;
       if (categoriesHandled[categoryId]) {
@@ -7216,12 +7202,12 @@ class ReportingMenu_store_ReportingMenuStore {
       let categoryGroups = null;
       const pagesWithCategory = pages.filter(p => p.category.id === categoryId);
       pagesWithCategory.forEach(p => {
-        const subcategory = ReportingMenu_store_extends({}, p.subcategory);
+        const subcategory = Object.assign({}, p.subcategory);
         const isSubcategoryDisplayed = subcategory.id === displayedSubcategory && isCategoryDisplayed;
         if (p.widgets && p.widgets[0] && isNumeric(p.subcategory.id)) {
           // we handle a goal or something like it
           if (!categoryGroups) {
-            categoryGroups = ReportingMenu_store_extends({}, subcategory);
+            categoryGroups = Object.assign({}, subcategory);
             categoryGroups.name = translate('CoreHome_ChooseX', [category.name]);
             categoryGroups.isGroup = true;
             categoryGroups.subcategories = [];
@@ -7334,7 +7320,6 @@ class Widgets_store_WidgetsStore {
 }
 /* harmony default export */ var Widgets_store = (new Widgets_store_WidgetsStore());
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/ReportingMenu/ReportingMenu.vue?vue&type=script&lang=ts
-function ReportingMenuvue_type_script_lang_ts_extends() { ReportingMenuvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ReportingMenuvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -7440,7 +7425,7 @@ const ReportingMenuvue_type_script_lang_ts_REPORTING_HELP_NOTIFICATION_ID = 'rep
         // be reloaded
         this.loadSubcategory(category, subcategory);
       } else {
-        src_MatomoUrl_MatomoUrl.updateHash(ReportingMenuvue_type_script_lang_ts_extends(ReportingMenuvue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
+        src_MatomoUrl_MatomoUrl.updateHash(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
           category: category.id,
           subcategory: subcategory.id
         }));
@@ -7508,7 +7493,7 @@ const ReportingMenuvue_type_script_lang_ts_REPORTING_HELP_NOTIFICATION_ID = 'rep
           category,
           subcategory
         };
-        src_MatomoUrl_MatomoUrl.updateHash(ReportingMenuvue_type_script_lang_ts_extends(ReportingMenuvue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
+        src_MatomoUrl_MatomoUrl.updateHash(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
           category: category.id,
           subcategory: subcategory.id
         }));
@@ -7623,7 +7608,6 @@ function WidgetLoadervue_type_template_id_e256fdba_render(_ctx, _cache, $props, 
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/WidgetLoader/WidgetLoader.vue?vue&type=template&id=e256fdba
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/WidgetLoader/WidgetLoader.vue?vue&type=script&lang=ts
-function WidgetLoadervue_type_script_lang_ts_extends() { WidgetLoadervue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return WidgetLoadervue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -7709,8 +7693,8 @@ function WidgetLoadervue_type_script_lang_ts_extends() { WidgetLoadervue_type_sc
     },
     getWidgetUrl(parameters) {
       const urlParams = src_MatomoUrl_MatomoUrl.parsed.value;
-      let fullParameters = WidgetLoadervue_type_script_lang_ts_extends({}, parameters || {});
-      const paramsToForward = Object.keys(WidgetLoadervue_type_script_lang_ts_extends(WidgetLoadervue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
+      let fullParameters = Object.assign({}, parameters || {});
+      const paramsToForward = Object.keys(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
         idSite: '',
         period: '',
         date: '',
@@ -7726,7 +7710,7 @@ function WidgetLoadervue_type_script_lang_ts_extends() { WidgetLoadervue_type_sc
         }
       });
       if (Comparisons_store_instance.isComparisonEnabled()) {
-        fullParameters = WidgetLoadervue_type_script_lang_ts_extends(WidgetLoadervue_type_script_lang_ts_extends({}, fullParameters), {}, {
+        fullParameters = Object.assign(Object.assign({}, fullParameters), {}, {
           comparePeriods: urlParams.comparePeriods,
           compareDates: urlParams.compareDates,
           compareSegments: urlParams.compareSegments
@@ -7829,7 +7813,6 @@ function WidgetContainervue_type_template_id_73071e47_render(_ctx, _cache, $prop
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/WidgetContainer/WidgetContainer.vue?vue&type=template&id=73071e47
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/WidgetContainer/WidgetContainer.vue?vue&type=script&lang=ts
-function WidgetContainervue_type_script_lang_ts_extends() { WidgetContainervue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return WidgetContainervue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 // since we're recursing, don't import the plugin directly
@@ -7855,8 +7838,8 @@ const Widget = useExternalPluginComponent('CoreHome', 'Widget');
       const isWidgetized = ((_widget$parameters = widget.parameters) === null || _widget$parameters === void 0 ? void 0 : _widget$parameters.widget) === '1' || ((_widget$parameters2 = widget.parameters) === null || _widget$parameters2 === void 0 ? void 0 : _widget$parameters2.widget) === 1;
       const isGraphEvolution = isWidgetized && widget.viewDataTable === 'graphEvolution';
       // we hide the first title for Visits Overview with Graph and Goal Overview
-      const firstWidget = isGraphEvolution ? WidgetContainervue_type_script_lang_ts_extends(WidgetContainervue_type_script_lang_ts_extends({}, widget), {}, {
-        parameters: WidgetContainervue_type_script_lang_ts_extends(WidgetContainervue_type_script_lang_ts_extends({}, widget.parameters), {}, {
+      const firstWidget = isGraphEvolution ? Object.assign(Object.assign({}, widget), {}, {
+        parameters: Object.assign(Object.assign({}, widget.parameters), {}, {
           showtitle: '0'
         })
       }) : widget;
@@ -7918,7 +7901,6 @@ function WidgetByDimensionContainervue_type_template_id_ad0a8c4a_render(_ctx, _c
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/WidgetByDimensionContainer/WidgetByDimensionContainer.vue?vue&type=template&id=ad0a8c4a
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/WidgetByDimensionContainer/WidgetByDimensionContainer.vue?vue&type=script&lang=ts
-function WidgetByDimensionContainervue_type_script_lang_ts_extends() { WidgetByDimensionContainervue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return WidgetByDimensionContainervue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -7964,7 +7946,7 @@ function WidgetByDimensionContainervue_type_script_lang_ts_extends() { WidgetByD
   methods: {
     selectWidget(widget) {
       // we copy to force rerender if selecting same widget
-      this.selectedWidget = WidgetByDimensionContainervue_type_script_lang_ts_extends({}, widget);
+      this.selectedWidget = Object.assign({}, widget);
     }
   }
 }));
@@ -8012,7 +7994,6 @@ function Widgetvue_type_template_id_2ddfad58_render(_ctx, _cache, $props, $setup
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/Widget/Widget.vue?vue&type=template&id=2ddfad58
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/Widget/Widget.vue?vue&type=script&lang=ts
-function Widgetvue_type_script_lang_ts_extends() { Widgetvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Widgetvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -8112,7 +8093,7 @@ function findContainer(widgetsByCategory, containerId) {
     actualWidget() {
       const widget = this.widget;
       if (widget) {
-        const result = Widgetvue_type_script_lang_ts_extends({}, widget);
+        const result = Object.assign({}, widget);
         if (widget && widget.isReport && !widget.documentation) {
           const report = ReportMetadata_store.findReport(widget.module, widget.action);
           if (report && report.documentation) {
@@ -8124,16 +8105,16 @@ function findContainer(widgetsByCategory, containerId) {
       if (this.containerid) {
         const containerWidget = findContainer(this.allWidgets, this.containerid);
         if (containerWidget) {
-          const result = Widgetvue_type_script_lang_ts_extends({}, containerWidget);
+          const result = Object.assign({}, containerWidget);
           if (this.widgetized) {
             result.isFirstInPage = true;
-            result.parameters = Widgetvue_type_script_lang_ts_extends(Widgetvue_type_script_lang_ts_extends({}, result.parameters), {}, {
+            result.parameters = Object.assign(Object.assign({}, result.parameters), {}, {
               widget: '1'
             });
             const widgets = getWidgetChildren(result);
             if (widgets) {
-              result.widgets = widgets.map(w => Widgetvue_type_script_lang_ts_extends(Widgetvue_type_script_lang_ts_extends({}, w), {}, {
-                parameters: Widgetvue_type_script_lang_ts_extends(Widgetvue_type_script_lang_ts_extends({}, w.parameters), {}, {
+              result.widgets = widgets.map(w => Object.assign(Object.assign({}, w), {}, {
+                parameters: Object.assign(Object.assign({}, w.parameters), {}, {
                   widget: '1',
                   containerId: this.containerid
                 })
@@ -8199,7 +8180,6 @@ function ReportingPagevue_type_template_id_16afd136_render(_ctx, _cache, $props,
 
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/ReportingPage/ReportingPage.store.ts
 function ReportingPage_store_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function ReportingPage_store_extends() { ReportingPage_store_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ReportingPage_store_extends.apply(this, arguments); }
 /*!
  * Matomo - free/libre analytics platform
  *
@@ -8226,12 +8206,12 @@ function markWidgetsInFirstRowOfPage(widgets) {
     const newWidgets = [...widgets];
     const groupedWidgets = widgets[0];
     if (groupedWidgets.group) {
-      newWidgets[0] = ReportingPage_store_extends(ReportingPage_store_extends({}, newWidgets[0]), {}, {
+      newWidgets[0] = Object.assign(Object.assign({}, newWidgets[0]), {}, {
         left: markWidgetsInFirstRowOfPage(groupedWidgets.left || []),
         right: markWidgetsInFirstRowOfPage(groupedWidgets.right || [])
       });
     } else {
-      newWidgets[0] = ReportingPage_store_extends(ReportingPage_store_extends({}, newWidgets[0]), {}, {
+      newWidgets[0] = Object.assign(Object.assign({}, newWidgets[0]), {}, {
         isFirstInPage: true
       });
     }
@@ -8280,7 +8260,7 @@ class ReportingPage_store_ReportingPageStore {
       for (let i = 0; i < widgets.length; i += 1) {
         const widget = widgets[i];
         if (shouldBeRenderedWithFullWidth(widget) || widgets[i + 1] && shouldBeRenderedWithFullWidth(widgets[i + 1])) {
-          groupedWidgets.push(ReportingPage_store_extends(ReportingPage_store_extends({}, widget), {}, {
+          groupedWidgets.push(Object.assign(Object.assign({}, widget), {}, {
             widgets: sortOrderables(getWidgetChildren(widget))
           }));
         } else {
@@ -8320,7 +8300,6 @@ class ReportingPage_store_ReportingPageStore {
 }
 /* harmony default export */ var ReportingPage_store = (new ReportingPage_store_ReportingPageStore());
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/ReportingPage/ReportingPage.vue?vue&type=script&lang=ts
-function ReportingPagevue_type_script_lang_ts_extends() { ReportingPagevue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ReportingPagevue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -8435,7 +8414,7 @@ function hideOnlyRawDataNoticifation() {
         if (hasNoPage) {
           const page = ReportingPages_store.findPageInCategory(category);
           if (page && page.subcategory) {
-            src_MatomoUrl_MatomoUrl.updateHash(ReportingPagevue_type_script_lang_ts_extends(ReportingPagevue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
+            src_MatomoUrl_MatomoUrl.updateHash(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
               subcategory: page.subcategory.id
             }));
             return;
@@ -8904,7 +8883,6 @@ ReportExportPopovervue_type_script_lang_ts.render = ReportExportPopovervue_type_
 
 /* harmony default export */ var ReportExportPopover = (ReportExportPopovervue_type_script_lang_ts);
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/ReportExport/ReportExport.ts
-function ReportExport_extends() { ReportExport_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ReportExport_extends.apply(this, arguments); }
 /*!
  * Matomo - free/libre analytics platform
  *
@@ -8980,7 +8958,7 @@ const {
         app.unmount();
         if (popoverParamBackup !== '') {
           setTimeout(() => {
-            src_MatomoUrl_MatomoUrl.updateHash(ReportExport_extends(ReportExport_extends({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
+            src_MatomoUrl_MatomoUrl.updateHash(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.hashParsed.value), {}, {
               popover: popoverParamBackup
             }));
             if (binding.value.onClose) {
@@ -9016,7 +8994,6 @@ function Sparklinevue_type_template_id_7dbf2b09_render(_ctx, _cache, $props, $se
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/Sparkline/Sparkline.vue?vue&type=template&id=7dbf2b09
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/Sparkline/Sparkline.vue?vue&type=script&lang=ts
-function Sparklinevue_type_script_lang_ts_extends() { Sparklinevue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Sparklinevue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -9064,7 +9041,7 @@ function Sparklinevue_type_script_lang_ts_extends() { Sparklinevue_type_script_l
       };
       const givenParams = typeof params === 'object' ? params : src_MatomoUrl_MatomoUrl.parse(params.substring(params.indexOf('?') + 1));
       const helper = new AjaxHelper_AjaxHelper();
-      const urlParams = helper.mixinDefaultGetParams(Sparklinevue_type_script_lang_ts_extends(Sparklinevue_type_script_lang_ts_extends({}, defaultParams), givenParams));
+      const urlParams = helper.mixinDefaultGetParams(Object.assign(Object.assign({}, defaultParams), givenParams));
       // Append the token_auth to the URL if it was set (eg. embed dashboard)
       const token_auth = src_MatomoUrl_MatomoUrl.parsed.value.token_auth;
       if (token_auth && token_auth.length && Matomo_Matomo.shouldPropagateTokenAuth) {
@@ -9982,7 +9959,6 @@ function MobileLeftMenuvue_type_template_id_49f29e13_render(_ctx, _cache, $props
 // CONCATENATED MODULE: ./plugins/CoreHome/vue/src/MobileLeftMenu/MobileLeftMenu.vue?vue&type=template&id=49f29e13
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreHome/vue/src/MobileLeftMenu/MobileLeftMenu.vue?vue&type=script&lang=ts
-function MobileLeftMenuvue_type_script_lang_ts_extends() { MobileLeftMenuvue_type_script_lang_ts_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return MobileLeftMenuvue_type_script_lang_ts_extends.apply(this, arguments); }
 
 
 
@@ -10002,7 +9978,7 @@ const {
   },
   methods: {
     getMenuUrl(params) {
-      return `?${src_MatomoUrl_MatomoUrl.stringify(MobileLeftMenuvue_type_script_lang_ts_extends(MobileLeftMenuvue_type_script_lang_ts_extends({}, src_MatomoUrl_MatomoUrl.urlParsed.value), params))}`;
+      return `?${src_MatomoUrl_MatomoUrl.stringify(Object.assign(Object.assign({}, src_MatomoUrl_MatomoUrl.urlParsed.value), params))}`;
     },
     translateIfNecessary(name) {
       if (name.includes('_')) {

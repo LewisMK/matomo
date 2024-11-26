@@ -324,7 +324,6 @@ function SingleMetricViewvue_type_template_id_2757a028_render(_ctx, _cache, $pro
 // CONCATENATED MODULE: ./plugins/CoreVisualizations/vue/src/SingleMetricView/SingleMetricView.vue?vue&type=template&id=2757a028
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/CoreVisualizations/vue/src/SingleMetricView/SingleMetricView.vue?vue&type=script&lang=ts
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -493,24 +492,24 @@ const {
       }
       const method = `${apiModule}.${apiAction}`;
       // first request for formatted data
-      promises.push(external_CoreHome_["AjaxHelper"].fetch(_extends({
+      promises.push(external_CoreHome_["AjaxHelper"].fetch(Object.assign({
         method,
         format_metrics: 'all'
       }, extraParams)));
       if (external_CoreHome_["Matomo"].period !== 'range') {
         // second request for unformatted data so we can calculate evolution
-        promises.push(external_CoreHome_["AjaxHelper"].fetch(_extends({
+        promises.push(external_CoreHome_["AjaxHelper"].fetch(Object.assign({
           method,
           format_metrics: '0'
         }, extraParams)));
         // third request for past data (unformatted)
-        promises.push(external_CoreHome_["AjaxHelper"].fetch(_extends({
+        promises.push(external_CoreHome_["AjaxHelper"].fetch(Object.assign({
           method,
           date: getLastPeriodDate(),
           format_metrics: '0'
         }, extraParams)));
         // fourth request for past data (formatted for tooltip display)
-        promises.push(external_CoreHome_["AjaxHelper"].fetch(_extends({
+        promises.push(external_CoreHome_["AjaxHelper"].fetch(Object.assign({
           method,
           date: getLastPeriodDate(),
           format_metrics: 'all'
