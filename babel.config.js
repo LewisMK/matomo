@@ -19,4 +19,7 @@ module.exports = {
       ]
     }],
   ],
+  plugins: [
+    ['@babel/plugin-transform-object-rest-spread', { useBuiltIns: true }],
+  ],
 };
