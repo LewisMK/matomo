@@ -103,6 +103,24 @@ describe('AllWebsitesDashboard', function () {
 
             expect(await page.screenshotSelector('#main')).to.matchImage('no_sparklines');
         });
+
+        it('should correctly display a KPI badge when added through event', async function () {
+            await page.goto(dashboardUrl);
+            await page.waitForNetworkIdle();
+
+            await page.evaluate(() => {
+              window.CoreHome.Matomo.on('MultiSites.DashboardKPIs.updated', function(data) {
+                  data.kpis.badges.hits = '<strong>Plan:</strong> 600K hits/month';
+              })
+            });
+
+            // change period to trigger reload of KPIS
+            await page.click('.move-period-prev');
+            await page.click('.move-period-next');
+            await page.waitForNetworkIdle();
+
+            expect(await page.screenshotSelector('#main')).to.matchImage('dashboard_kpi_badge');
+        });
     });
 
     describe('Dashboard Controls', function () {
