@@ -148,17 +148,27 @@ describe('ResetPassword', function () {
             expect(messageText).to.match(/Open the confirmation link sent to your e-mail inbox to confirm changing your password/i);
         });
 
-        it('should show confirmation page when "was not me" link is clicked', async function () {
-            const cancelUrl = await readLinkFromPasswordResetMail('cancelResetPassword');
+        it('should show initiate cancel confirmation page when "was not me" link is clicked', async function () {
+            const cancelUrl = await readLinkFromPasswordResetMail('initiateCancelResetPassword');
 
             await page.goto(cancelUrl);
             await page.waitForNetworkIdle();
 
+            expect(await page.screenshot({ fullPage: true })).to.matchImage('confirm_cancel');
+        });
+
+        it('should show confirmation page when "was not me" link is clicked and continue is clicked', async function () {
+            const cancelUrl = await readLinkFromPasswordResetMail('initiateCancelResetPassword');
+
+            await page.goto(cancelUrl);
+            await page.waitForNetworkIdle();
+
+            await page.click('#confirm-cancel-reset-password');
             expect(await page.screenshot({ fullPage: true })).to.matchImage('cancel');
         });
 
         it('should show an error message if an outdated password reset token is used', async function () {
-            const cancelUrl = await readLinkFromPasswordResetMail('cancelResetPassword');
+            const cancelUrl = await readLinkFromPasswordResetMail('initiateCancelResetPassword');
 
             await page.goto(cancelUrl);
             await page.waitForNetworkIdle();
